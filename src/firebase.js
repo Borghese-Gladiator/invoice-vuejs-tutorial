@@ -4,19 +4,15 @@ import { initializeApp } from "firebase/app";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-
-// Load env variables
-require('dotenv').config()
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
-	apiKey: process.env.API_KEY,
-	authDomain: process.env.AUTH_DOMAIN,
-	projectId: process.env.PROJECT_ID,
-	storageBucket: process.env.STORAGE_BUCKLLET,
-	messagingSenderId: procss.env.MESSAGINGS_SENDER_ID,
-	appId: process.env.APP_ID,
-	databaseURL: process.env.DATABASE_URL
+	apiKey: process.env.VUE_API_KEY,
+	authDomain: process.env.VUE_AUTH_DOMAIN,
+	projectId: process.env.VUE_PROJECT_ID,
+	storageBucket: process.env.VUE_STORAGE_BUCKLLET,
+	messagingSenderId: process.env.VUE_MESSAGINGS_SENDER_ID,
+	appId: process.env.VUE_APP_ID,
+	databaseURL: process.env.VUE_DATABASE_URL
 };
 
 // Initialize Firebase
