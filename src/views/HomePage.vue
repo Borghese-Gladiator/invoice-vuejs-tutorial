@@ -236,7 +236,8 @@
 
 <script>
 import NavMenu from "../components/NavMenu.vue";
-import { fire } from "../firebase";
+import { getDatabase, ref, set } from "firebase/database";
+import firebaseApp from "../firebase";
 export default {
   data() {
     return {
@@ -286,11 +287,9 @@ export default {
         condition: this.condition,
         note: this.note
       };
-      fire
-        .database()
-        .ref("createInvoice")
-        .push(createInvoice);
-      this.businessName = "";
+			const db = getDatabase(firebaseApp);
+			set(ref(db, "createInvoice"), createInvoice);
+			this.businessName = "";
       this.businessEmail = "";
       this.businessPhone = "";
       this.businessAddress = "";
