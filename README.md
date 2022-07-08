@@ -5,6 +5,8 @@ Followed tutorial to build Vue3 + TailwindCSS + Firebase Realtime Database app
 - Articles used Vue2, but I used Vue3 with similar code
 - [https://www.vuemastery.com/blog/vue-router-a-tutorial-for-vue-3/](https://www.vuemastery.com/blog/vue-router-a-tutorial-for-vue-3/)
 - Fix bug of tailwindcss not applying styles [https://tailwindcss.com/docs/guides/vite](https://tailwindcss.com/docs/guides/vite)
+- [https://firebase.google.com/docs/database/web/start](https://firebase.google.com/docs/database/web/start)
+- [https://firebase.google.com/docs/database/web/read-and-write](https://firebase.google.com/docs/database/web/read-and-write)
 
 ## Notes
 Vue.js Complaints
@@ -40,9 +42,12 @@ Firebase
     - Realtime Database - https://firebase.google.com/docs/database/web/start
     - Cloud Firestore - https://firebase.google.com/docs/firestore/quickstart
     - I rewrote firebase.js and HomePage.vue usage to accomadate newer versions for Realtime Database
-  - add env variables for deployment
-    - `npm i dotenv`
-    - create example.env
+  - add env variables for deployment (vue requires env variables to be prefixed with VUE_) [https://stackoverflow.com/questions/50828904/using-environment-variables-with-vue-js](https://stackoverflow.com/questions/50828904/using-environment-variables-with-vue-js)
+  - create example.env
+- Deploy content to Netlify using Git-based Deployment
+  - build command: "npm run build"
+	- build directory: "dist"
+	- set all environment variables listed in example.env
 
 ## Project setup
 ```
